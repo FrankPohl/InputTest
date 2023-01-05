@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InputTest.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="5"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Label
+                Text="Culture Setting"
+                FontSize="14"
+                />
+            <Label
+                x:Name="CultureLabel"
+                Text=""
+                FontSize="18"
+                />
+            <Label
+                Text="UI Culture Setting"
+                FontSize="14"
+                />
+            <Label
+                x:Name="UiCultureLabel"
+                Text=""
+                FontSize="18"
+                />
+            <Label
+                Text="Decimal separator"
+                FontSize="14"
+                />
+            <Label
+                x:Name="DecimalSeparator"
+                Text=""
+                FontSize="18"
+                />
+            <Label
+                Text="Input Field for double with 6 digits"
+                FontSize="14"
+                />
+            <Entry x:Name="DoubleInput"
+                Text=""
+                   Keyboard="Numeric"
+                   Placeholder="Enter a decimal numer"
+                MaxLength="6"
+                FontSize="32" ReturnType="Next"
+                   TextChanged="OnTextChanged"
+                />
+            <Label
+                x:Name="IsADouble"
+                Text="Shows convert to double result whenever return in Entry field is pressed"
+                FontSize="14"
+                />
+            <TimePicker x:Name="TimeInput"/>
+            <Label
+                x:Name="TimeInCultureFormat"
+                Text=""
+                FontSize="18"
+                />
+
+            <Button
+                x:Name="SetFranceCuluture"
+                Text="France as culture"
+                Clicked="OnSetFranceClicked"/>
+
+            <Button
+                x:Name="SetUSCuluture"
+                Text="US as culture"
+                Clicked="OnSetUsClicked"/>
+
+            <Button
+                x:Name="SetGermanCuluture"
+                Text="German as culture"
+                Clicked="OnSetGermanClicked"/>
+
+            <Button
+                x:Name="AdjutsTime"
+                Text="Click to renew time"
+                Clicked="OnTimeClicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
