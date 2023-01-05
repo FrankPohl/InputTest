@@ -11,7 +11,6 @@ public partial class MainPage : ContentPage
         CultureLabel.Text = CultureInfo.CurrentCulture.DisplayName;
         UiCultureLabel.Text = CultureInfo.CurrentUICulture.DisplayName;
         DecimalSeparator.Text = CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalSeparator;
-        TimeInput.Format = "g";
         TimeInCultureFormat.Text = DateTime.Now.TimeOfDay.ToString("g");
     }
 
